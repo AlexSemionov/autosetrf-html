@@ -11,7 +11,44 @@
 
   <body>
     <header class="header">
-      <div class="container"></div>
+      <div class="container">
+        <div class="header__logo">
+          <a class="header__logo-link" href="./">
+            <img class="header__logo-image" src="./assets/logo.svg" alt="logo" />
+          </a>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__nav-menu">
+            <li class="header__nav-menu-item">
+              <a class="header__nav-link" href="#">Купить</a>
+            </li>
+            <li class="header__nav-menu-item">
+              <a class="header__nav-link" href="#">Продать</a>
+            </li>
+            <li class="header__nav-menu-item">
+              <a class="header__nav-link" href="#">Каталог шин</a>
+            </li>
+          </ul>
+
+          <div class="custom-select" data-value="1">
+            <select id="location" name="infoCategory">
+              <option value="1">Москва</option>
+              <option value="2">Санкт-Петербург</option>
+              <option value="3">Новосибирск</option>
+              <option value="4">Екатеринбург</option>
+              <option value="4">Казань</option>
+            </select>
+          </div>
+        </nav>
+
+        <div class="header__controls">
+          <button class="header__callback">
+            <span class="header__callback-text">Заказать звонок</span>
+          </button>
+          <button class="header__burger"></button>
+        </div>
+      </div>
     </header>
 
     <main class="main"></main>

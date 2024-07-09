@@ -1,2 +1,246 @@
 .header {
+  padding: 20px 0;
+  background-color: $white;
+
+  @include mobile {
+    padding: 15px 0 9px;
+  }
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    @include tabletsm {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+    order: 0;
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+
+      @include laptop {
+        width: 192px;
+      }
+    }
+  }
+
+  &__nav {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    order: 1;
+
+    @include tabletsm {
+      flex: 1 1 100%;
+      order: 2;
+    }
+
+    &-menu {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      margin: 0;
+      padding: 0;
+
+      @include tablet {
+        gap: 30px;
+      }
+
+      @include tabletsm {
+        justify-content: flex-start;
+        gap: 15px;
+        overflow: auto;
+      }
+
+      &-item {
+        list-style: none;
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 133%;
+      color: $black;
+      transition: color ease-in-out 0.1s;
+
+      @include laptop {
+        font-size: 14px;
+        line-height: 143%;
+      }
+
+      @include tabletsm {
+        font-size: 13px;
+        line-height: 154%;
+      }
+
+      &:hover {
+        color: $red;
+      }
+
+      &:active {
+        color: rgba($color: $red, $alpha: 0.75);
+      }
+    }
+
+    & .custom-select {
+      &__selected {
+        padding-left: 24px;
+        background: url(../assets/location.svg) center left no-repeat;
+
+        @include laptop {
+          padding-left: 19px;
+        }
+
+        @include mobile {
+          padding-left: 17px;
+        }
+
+        &-text {
+          max-width: 72px;
+          width: 100%;
+          overflow: hidden;
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 125%;
+          color: $red;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          @include laptop {
+            max-width: 64px;
+            font-size: 14px;
+          }
+
+          @include mobile {
+            max-width: 56px;
+            font-size: 13px;
+          }
+        }
+      }
+
+      &__items {
+        padding: 6px 4px;
+
+        @include laptop {
+          left: auto;
+          right: 0;
+        }
+      }
+
+      &__item {
+        padding: 6px 8px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 125%;
+        color: $black;
+
+        @include laptop {
+          font-size: 14px;
+        }
+
+        @include mobile {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    order: 2;
+
+    @include tabletsm {
+      order: 1;
+    }
+  }
+
+  &__callback {
+    display: inline-block;
+    height: 40px;
+    padding: 10px 25px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 125%;
+    text-align: center;
+    color: $white;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    background-color: $red;
+    transition: background-color ease-in-out 0.1s, transform ease-in-out 0.1s;
+    cursor: pointer;
+
+    @include laptop {
+      height: 36px;
+      width: 36px;
+      padding: 0;
+      background: url(../assets/call.svg) center no-repeat;
+      background-color: $red;
+    }
+
+    &:hover {
+      background-color: rgba($color: $red, $alpha: 0.85);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    &-text {
+      @include laptop {
+        display: none;
+      }
+    }
+  }
+
+  &__burger {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    border: none;
+    border-radius: 7px;
+    background: url(../assets/burger.svg) center no-repeat;
+    background-color: $black;
+    transition: background-color ease-in-out 0.1s, transform ease-in-out 0.1s;
+    cursor: pointer;
+
+    @include laptop {
+      height: 36px;
+      width: 36px;
+    }
+
+    &.active {
+      background-image: url(../assets/close.svg);
+    }
+
+    &:hover {
+      background-color: rgba($color: $black, $alpha: 0.85);
+    }
+
+    &:active {
+      transform: scale(0.96);
+    }
+  }
 }
