@@ -8,4 +8,10 @@
   @include mobile {
     padding: 0 16px;
   }
+
+  &_tablet {
+    @include tablet {
+      max-width: 654px;
+    }
+  }
 }

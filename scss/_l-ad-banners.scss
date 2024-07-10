@@ -1,0 +1,143 @@
+.ad-banners {
+  padding: 30px 0 50px;
+
+  &__slider {
+    position: relative;
+
+    & .swiper {
+      &-pagination {
+        top: calc(100% + 16px);
+        bottom: auto;
+        display: flex;
+        justify-content: center;
+
+        &-bullet {
+          display: block;
+          width: 7px;
+          height: 7px;
+          margin: 0 13px;
+          background-color: $black;
+
+          &-active {
+            background-color: $red;
+          }
+        }
+      }
+    }
+
+    &-controls {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      right: 15px;
+      z-index: 200;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transform: translateY(-50%);
+
+      @include tablet {
+        left: -13px;
+        right: -13px;
+      }
+
+      &-prev,
+      &-next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
+        padding: 0;
+        box-sizing: border-box;
+        border: 1px solid $red;
+        border-radius: 30px;
+        background-color: $red;
+
+        &::before {
+          filter: brightness(0) invert(1);
+        }
+
+        &.swiper-button-disabled {
+          border: 1px solid #6d6c6c;
+          background-color: $white;
+
+          &::before {
+            filter: brightness(1) invert(0);
+          }
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          width: 10px;
+          height: 5px;
+          background: url(../assets/chevron-down-outline.svg) center no-repeat;
+        }
+      }
+
+      &-prev {
+        &::before {
+          transform: rotate(90deg);
+        }
+      }
+
+      &-next {
+        &::before {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+
+  &__slide {
+    display: block;
+    aspect-ratio: 3.75 / 1;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: #f3f3f5;
+
+    @include tablet {
+      aspect-ratio: 1 / 1;
+    }
+
+    @include mobilesm {
+      aspect-ratio: 1 / 1.82926829268;
+    }
+
+    &-banner {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      &_lg {
+        display: block;
+
+        @include tablet {
+          display: none;
+        }
+      }
+
+      &_md {
+        display: none;
+
+        @include tablet {
+          display: block;
+        }
+
+        @include mobilesm {
+          display: none;
+        }
+      }
+
+      &_sm {
+        display: none;
+
+        @include mobilesm {
+          display: block;
+        }
+      }
+    }
+  }
+}
