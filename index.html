@@ -234,6 +234,245 @@
                 <button class="filter__controls-info-button">Где смотреть параметры</button>
               </div>
             </div>
+
+            <div class="filter__tabs">
+              <div class="filter__tab active" id="cars">
+                <div class="filter__tab-item filter__tab-item_sm">
+                  <div class="custom-select" data-value="">
+                    <select id="brand" name="brand">
+                      <option value="" disabled selected>Марка</option>
+                      <option value="1">Марка 1</option>
+                      <option value="2">Марка 2</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item filter__tab-item_sm">
+                  <div class="custom-select" data-value="">
+                    <select id="model" name="model">
+                      <option value="" disabled selected>Модель</option>
+                      <option value="1">Модель 1</option>
+                      <option value="2">Модель 2</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item filter__tab-item_sm">
+                  <div class="custom-select" data-value="">
+                    <select id="city" name="city">
+                      <option value="" disabled selected>Город</option>
+                      <option value="1">Город 1</option>
+                      <option value="2">Город 2</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item filter__tab-item_md">
+                  <div class="custom-select" data-value="">
+                    <select id="yearFrom" name="yearFrom">
+                      <option value="" disabled selected>Год от</option>
+                      <option value="1">от 1994</option>
+                      <option value="2">от 1995</option>
+                    </select>
+                  </div>
+
+                  <div class="custom-select" data-value="">
+                    <select id="yearTo" name="yearTo">
+                      <option value="" disabled selected>Год до</option>
+                      <option value="1">до 1996</option>
+                      <option value="2">до 1997</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item filter__tab-item_lg">
+                  <div class="custom-select" data-value="">
+                    <select id="priceFrom" name="priceFrom">
+                      <option value="" disabled selected>Цена от</option>
+                      <option value="1">от 1000000</option>
+                      <option value="2">от 10000000</option>
+                    </select>
+                  </div>
+
+                  <div class="custom-select" data-value="">
+                    <select id="priceTo" name="priceTo">
+                      <option value="" disabled selected>Цена до</option>
+                      <option value="1">до 2000000</option>
+                      <option value="2">до 20000000</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item filter__tab-item_sm hidden">
+                  <div class="custom-select" data-value="">
+                    <select id="bodyType" name="brand">
+                      <option value="" disabled selected>Тип кузова</option>
+                      <option value="1">Кузов 1</option>
+                      <option value="2">Кузов 2</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item filter__tab-item_sm hidden">
+                  <div class="custom-select" data-value="">
+                    <select id="gearType" name="gearType">
+                      <option value="" disabled selected>Тип КПП</option>
+                      <option value="1">КПП 1</option>
+                      <option value="2">КПП 2</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item filter__tab-item_sm hidden">
+                  <div class="custom-select" data-value="">
+                    <select id="engineType" name="engineType">
+                      <option value="" disabled selected>Тип двигателя</option>
+                      <option value="1">Двигатель 1</option>
+                      <option value="2">Двигатель 2</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item filter__tab-item_md hidden">
+                  <div class="custom-select" data-value="">
+                    <select id="color" name="color">
+                      <option value="" disabled selected>Цвет</option>
+                      <option value="1">Цвет 1</option>
+                      <option value="2">Цвет 2</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item filter__tab-item_lg hidden">
+                  <div class="custom-select" data-value="">
+                    <select id="mileageFrom" name="mileageFrom">
+                      <option value="" disabled selected>Пробег от</option>
+                      <option value="1">от 100000</option>
+                      <option value="2">от 200000</option>
+                    </select>
+                  </div>
+
+                  <div class="custom-select" data-value="">
+                    <select id="mileageTo" name="mileageTo">
+                      <option value="" disabled selected>Пробег до</option>
+                      <option value="1">до 200000</option>
+                      <option value="2">до 300000</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item filter__tab-item_sm hidden">
+                  <div class="custom-select" data-value="">
+                    <select id="driveType" name="driveType">
+                      <option value="" disabled selected>Тип привода</option>
+                      <option value="1">привод 1</option>
+                      <option value="2">привод 2</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item filter__tab-item_sm hidden">
+                  <div class="custom-select" data-value="">
+                    <select id="steeringWheelSide" name="steeringWheelSide">
+                      <option value="" disabled selected>Руль</option>
+                      <option value="1">Левый</option>
+                      <option value="2">Правый</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item filter__tab-item_xl">
+                  <button class="filter__tab-submit">Показать 1243 предложений</button>
+                </div>
+              </div>
+
+              <div class="filter__tab" id="tires">
+                <div class="filter__tab-item">
+                  <div class="custom-select" data-value="">
+                    <select id="tiresBrand" name="tiresBrand">
+                      <option value="" disabled selected>Производитель</option>
+                      <option value="1">Производитель 1</option>
+                      <option value="2">Производитель 2</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item">
+                  <div class="custom-select custom-select_tires-width" data-value="">
+                    <select id="tiresWidth" name="tiresWidth">
+                      <option value="" disabled selected>Ширина профиля</option>
+                      <option value="1">Ширина 1</option>
+                      <option value="2">Ширина 2</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item">
+                  <div class="custom-select custom-select_tires-height" data-value="">
+                    <select id="tiresHeight" name="tiresHeight">
+                      <option value="" disabled selected>Высота профиля</option>
+                      <option value="1">Высота 1</option>
+                      <option value="2">Высота 2</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item">
+                  <div class="custom-select custom-select_tires-diameter" data-value="">
+                    <select id="tiresDiameter" name="tiresDiameter">
+                      <option value="" disabled selected>Диаметр</option>
+                      <option value="1">Диаметр 1</option>
+                      <option value="2">Диаметр 2</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item">
+                  <div class="custom-select custom-select_tires-season" data-value="">
+                    <select id="tiresSeason" name="tiresSeason">
+                      <option value="" disabled selected>Сезон</option>
+                      <option value="1">Сезон 1</option>
+                      <option value="2">Сезон 2</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item">
+                  <div class="custom-select custom-select_tires-disks" data-value="">
+                    <select id="tiresDisks" name="tiresDisks">
+                      <option value="" disabled selected>Диски</option>
+                      <option value="1">Диски 1</option>
+                      <option value="2">Диски 2</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item">
+                  <div class="custom-select" data-value="">
+                    <select id="tiresPriceTo" name="tiresPriceTo">
+                      <option value="" disabled selected>Цена до</option>
+                      <option value="1">Цена до 100000</option>
+                      <option value="2">Цена до 200000</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="filter__tab-item">
+                  <button class="filter__tab-submit filter__tab-submit_w100">
+                    Показать 1243 предложений
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter__tabs-controls">
+              <button class="filter__tabs-controls-advanced">
+                <span class="filter__tabs-controls-advanced-icon"></span>
+                <span class="filter__tabs-controls-advanced-text">Расширенный фильтр</span>
+              </button>
+
+              <button class="filter__tabs-controls-reset">Сбросить</button>
+            </div>
           </div>
         </div>
       </section>

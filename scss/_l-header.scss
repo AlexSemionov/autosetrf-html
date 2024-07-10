@@ -104,6 +104,8 @@
     }
 
     & .custom-select {
+      width: auto;
+
       &__selected {
         padding-left: 24px;
         background: url(../assets/location.svg) center left no-repeat;
@@ -202,7 +204,7 @@
     }
 
     &:hover {
-      background-color: rgba($color: $red, $alpha: 0.85);
+      filter: contrast(90%);
     }
 
     &:active {

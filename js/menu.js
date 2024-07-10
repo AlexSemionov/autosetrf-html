@@ -5,6 +5,7 @@ if (burgerButton && mainNav) {
   burgerButton.addEventListener('click', (event) => {
     event.currentTarget.classList.toggle('active');
     mainNav.classList.toggle('active');
+    document.body.classList.toggle('hidden');
   });
 
   mainNav.addEventListener('click', (event) => {
@@ -15,6 +16,7 @@ if (burgerButton && mainNav) {
     if (isNavLink || isContactsLink || isInfoLink) {
       event.currentTarget.classList.remove('active');
       burgerButton.classList.remove('active');
+      document.body.classList.remove('hidden');
     }
   });
 }

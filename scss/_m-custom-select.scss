@@ -1,6 +1,7 @@
 .custom-select {
   position: relative;
   margin: 0;
+  width: 100%;
   border: none;
 
   & > select {
@@ -13,13 +14,15 @@
     justify-content: space-between;
     gap: 10px;
     width: 100%;
+    padding: 13px 15px;
     box-sizing: border-box;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 160%;
-    color: $black;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #6d6c6c;
     border: none;
-    background-color: rgba($color: $black, $alpha: 0.1);
+    border-radius: 7px;
+    background-color: rgba($color: $white, $alpha: 1);
     outline: none;
     user-select: none;
     cursor: pointer;
@@ -78,8 +81,6 @@
       background-color: rgba($color: $white, $alpha: 0.2);
       border-radius: 4px;
     }
-
-    
   }
 
   &__item {

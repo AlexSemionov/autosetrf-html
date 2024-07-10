@@ -102,6 +102,10 @@ body {
   overflow-y: scroll;
   color: $black;
   background-color: $white;
+
+  &.hidden {
+    overflow: hidden;
+  }
 }
 
 a,

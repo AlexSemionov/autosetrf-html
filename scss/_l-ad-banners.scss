@@ -53,6 +53,7 @@
         border: 1px solid $red;
         border-radius: 30px;
         background-color: $red;
+        cursor: pointer;
 
         &::before {
           filter: brightness(0) invert(1);
