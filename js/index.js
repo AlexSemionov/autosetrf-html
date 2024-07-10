@@ -1,5 +1,6 @@
 import './menu.js';
 import './custom-select.js';
+import './filter.js';
 
 const adBannersSwiper = new Swiper('.ad-banners .swiper', {
   spaceBetween: 20,
