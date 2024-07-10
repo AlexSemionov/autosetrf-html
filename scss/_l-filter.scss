@@ -277,12 +277,24 @@
       }
     }
 
-    &-item.hidden {
+    &-item.hidden, & .hidden {
       display: none;
     }
 
-    &.advanced &-item.hidden {
+    &.advanced &-item.hidden, &.advanced .hidden {
       display: flex;
+    }
+
+    &:not(.advanced) &-item_year {
+      flex: 1 1 150px;
+    }
+
+    &:not(.advanced) &-item_price {
+      flex: 1 1 150px;
+    }
+
+    &:not(.advanced) &-item_xl {
+      flex: 1 1 auto;
     }
 
     &-submit {

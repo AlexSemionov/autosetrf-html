@@ -1126,11 +1126,20 @@ img {
 .filter__tab-item .custom-select_tires-disks .custom-select__selected {
   background-image: url(../assets/tire-disk.svg);
 }
-.filter__tab-item.hidden {
+.filter__tab-item.hidden, .filter__tab .hidden {
   display: none;
 }
-.filter__tab.advanced .filter__tab-item.hidden {
+.filter__tab.advanced .filter__tab-item.hidden, .filter__tab.advanced .hidden {
   display: flex;
+}
+.filter__tab:not(.advanced) .filter__tab-item_year {
+  flex: 1 1 150px;
+}
+.filter__tab:not(.advanced) .filter__tab-item_price {
+  flex: 1 1 150px;
+}
+.filter__tab:not(.advanced) .filter__tab-item_xl {
+  flex: 1 1 auto;
 }
 .filter__tab-submit {
   flex: 0 0 auto;
