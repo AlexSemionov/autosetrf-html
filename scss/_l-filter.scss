@@ -276,13 +276,37 @@
           background-image: url(../assets/tire-disk.svg);
         }
       }
+
+      &-input {
+        display: block;
+        padding: 13px 15px;
+        box-sizing: border-box;
+        width: 100%;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        color: #6d6c6c;
+        border: none;
+        border-radius: 7px;
+        outline: none;
+        background-color: $white;
+        -moz-appearance: textfield;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
     }
 
-    &-item.hidden, & .hidden {
+    &-item.hidden,
+    & .hidden {
       display: none;
     }
 
-    &.advanced &-item.hidden, &.advanced .hidden {
+    &.advanced &-item.hidden,
+    &.advanced .hidden {
       display: flex;
     }
 

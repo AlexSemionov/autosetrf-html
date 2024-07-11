@@ -497,7 +497,7 @@ img {
 }
 @media (max-width: 768px) {
   .main-nav .container {
-    padding-top: 110px;
+    padding-top: 132px;
   }
 }
 .main-nav__nav {
@@ -1131,6 +1131,25 @@ img {
 }
 .filter__tab-item .custom-select_tires-disks .custom-select__selected {
   background-image: url(../assets/tire-disk.svg);
+}
+.filter__tab-item-input {
+  display: block;
+  padding: 13px 15px;
+  box-sizing: border-box;
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #6d6c6c;
+  border: none;
+  border-radius: 7px;
+  outline: none;
+  background-color: #ffffff;
+  -moz-appearance: textfield;
+}
+.filter__tab-item-input::-webkit-outer-spin-button, .filter__tab-item-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .filter__tab-item.hidden, .filter__tab .hidden {
   display: none;

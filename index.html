@@ -268,39 +268,43 @@
                 </div>
 
                 <div class="filter__tab-item filter__tab-item_md filter__tab-item_year">
-                  <div class="custom-select" data-value="">
-                    <select id="yearFrom" name="yearFrom">
-                      <option value="" disabled selected>Год от</option>
-                      <option value="1">от 1994</option>
-                      <option value="2">от 1995</option>
-                    </select>
-                  </div>
-
-                  <div class="custom-select hidden" data-value="">
-                    <select id="yearTo" name="yearTo">
-                      <option value="" disabled selected>Год до</option>
-                      <option value="1">до 1996</option>
-                      <option value="2">до 1997</option>
-                    </select>
-                  </div>
+                  <input
+                    class="filter__tab-item-input"
+                    type="number"
+                    id="yearFrom"
+                    name="yearFrom"
+                    min="1970"
+                    placeholder="Год от"
+                  />
+                  <input
+                    class="filter__tab-item-input hidden"
+                    type="number"
+                    id="yearTo"
+                    name="yearTo"
+                    min="1970"
+                    placeholder="до"
+                  />
                 </div>
 
                 <div class="filter__tab-item filter__tab-item_lg filter__tab-item_price">
-                  <div class="custom-select" data-value="">
-                    <select id="priceFrom" name="priceFrom">
-                      <option value="" disabled selected>Цена от</option>
-                      <option value="1">от 1000000</option>
-                      <option value="2">от 10000000</option>
-                    </select>
-                  </div>
-
-                  <div class="custom-select hidden" data-value="">
-                    <select id="priceTo" name="priceTo">
-                      <option value="" disabled selected>Цена до</option>
-                      <option value="1">до 2000000</option>
-                      <option value="2">до 20000000</option>
-                    </select>
-                  </div>
+                  <input
+                    class="filter__tab-item-input"
+                    type="number"
+                    id="priceFrom"
+                    name="priceFrom"
+                    min="0"
+                    step="10000"
+                    placeholder="Цена от"
+                  />
+                  <input
+                    class="filter__tab-item-input hidden"
+                    type="number"
+                    id="priceTo"
+                    name="priceTo"
+                    min="0"
+                    step="10000"
+                    placeholder="до"
+                  />
                 </div>
 
                 <div class="filter__tab-item filter__tab-item_sm hidden">
@@ -344,21 +348,24 @@
                 </div>
 
                 <div class="filter__tab-item filter__tab-item_lg hidden">
-                  <div class="custom-select" data-value="">
-                    <select id="mileageFrom" name="mileageFrom">
-                      <option value="" disabled selected>Пробег от</option>
-                      <option value="1">от 100000</option>
-                      <option value="2">от 200000</option>
-                    </select>
-                  </div>
-
-                  <div class="custom-select" data-value="">
-                    <select id="mileageTo" name="mileageTo">
-                      <option value="" disabled selected>Пробег до</option>
-                      <option value="1">до 200000</option>
-                      <option value="2">до 300000</option>
-                    </select>
-                  </div>
+                  <input
+                    class="filter__tab-item-input"
+                    type="number"
+                    id="mileageFrom"
+                    name="mileageFrom"
+                    min="0"
+                    step="10000"
+                    placeholder="Пробег от"
+                  />
+                  <input
+                    class="filter__tab-item-input hidden"
+                    type="number"
+                    id="mileageTo"
+                    name="mileageTo"
+                    min="0"
+                    step="10000"
+                    placeholder="до"
+                  />
                 </div>
 
                 <div class="filter__tab-item filter__tab-item_sm hidden">
@@ -448,13 +455,15 @@
                 </div>
 
                 <div class="filter__tab-item">
-                  <div class="custom-select" data-value="">
-                    <select id="tiresPriceTo" name="tiresPriceTo">
-                      <option value="" disabled selected>Цена до</option>
-                      <option value="1">Цена до 100000</option>
-                      <option value="2">Цена до 200000</option>
-                    </select>
-                  </div>
+                  <input
+                    class="filter__tab-item-input"
+                    type="number"
+                    id="tiresPriceTo"
+                    name="tiresPriceTo"
+                    min="0"
+                    step="10000"
+                    placeholder="Цена до"
+                  />
                 </div>
 
                 <div class="filter__tab-item">
