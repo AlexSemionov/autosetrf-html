@@ -530,7 +530,7 @@ img {
   flex: 1 1 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 15px;
 }
 @media (max-width: 576px) {
   .main-nav__nav-item_fullfilled {
@@ -554,6 +554,8 @@ img {
 }
 .main-nav__nav-item_fullfilled .main-nav__nav-item-link {
   flex: 0 0 30%;
+  height: -moz-fit-content;
+  height: fit-content;
   font-weight: 400;
   font-size: 16px;
   line-height: 125%;
