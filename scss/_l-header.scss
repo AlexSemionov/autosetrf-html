@@ -119,7 +119,7 @@
         }
 
         &-text {
-          max-width: 72px;
+          max-width: none;
           width: 100%;
           overflow: hidden;
           font-weight: 600;
@@ -128,6 +128,10 @@
           color: $red;
           text-overflow: ellipsis;
           white-space: nowrap;
+
+          @include desktop {
+            max-width: 72px;
+          }
 
           @include laptop {
             max-width: 64px;
