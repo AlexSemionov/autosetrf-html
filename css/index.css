@@ -479,7 +479,6 @@ img {
   z-index: 400;
   max-height: 100vh;
   box-sizing: border-box;
-  border-radius: 50px 0 0 50px;
   background-color: #f3f3f5;
   transition: transform ease-in-out 0.4s;
   transform: translateX(150vw);
@@ -503,8 +502,9 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: auto;
   max-height: calc(100vh - 170px);
+  height: 100%;
+  overflow: auto;
 }
 @media (max-width: 768px) {
   .main-nav__wrapper {
