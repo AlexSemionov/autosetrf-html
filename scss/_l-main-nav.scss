@@ -20,6 +20,7 @@
     max-height: 100vh;
     height: 100%;
     padding-top: 150px;
+    padding-bottom: 20px;
     box-sizing: border-box;
 
     @include tablet {
@@ -70,7 +71,7 @@
         flex: 1 1 100%;
         display: flex;
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 15px 24px;
 
         @include mobile {
           gap: 18px;
@@ -245,7 +246,7 @@
     display: flex;
     justify-content: space-between;
     gap: 24px;
-    padding: 24px 0;
+    padding: 24px 0 4px;
 
     @include tablet {
       flex-direction: column;
