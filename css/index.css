@@ -506,6 +506,11 @@ img {
   height: 100%;
   overflow: auto;
 }
+@media screen and (min-height: 1080px) and (min-width: 1240px) {
+  .main-nav__wrapper {
+    justify-content: flex-start;
+  }
+}
 @media (max-width: 768px) {
   .main-nav__wrapper {
     max-height: calc(100vh - 150px);
@@ -516,6 +521,12 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+}
+@media screen and (min-height: 1080px) and (min-width: 1240px) {
+  .main-nav__nav {
+    flex: 0 1 auto;
+    gap: 80px;
+  }
 }
 @media (max-width: 576px) {
   .main-nav__nav {

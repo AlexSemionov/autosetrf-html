@@ -35,6 +35,10 @@
     height: 100%;
     overflow: auto;
 
+    @media screen and (min-height: 1080px) and (min-width: 1240px)  {
+      justify-content: flex-start;
+    }
+
     @include tablet {
       max-height: calc(100vh - 150px);
     }
@@ -45,6 +49,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+
+    @media screen and (min-height: 1080px) and (min-width: 1240px)  {
+      flex: 0 1 auto;
+      gap: 80px;
+    }
 
     @include mobile {
       gap: 18px;
