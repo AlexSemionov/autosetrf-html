@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Автосеть.рф</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body style="background: rgba(255, 255, 255, 0)">
+    <div class="frame-filter">
+      <form class="frame-filter__form" id="filterFormCars">
+        <div class="frame-filter__item frame-filter__item_sm">
+          <div class="custom-select" data-value="">
+            <select id="brand" name="brand">
+              <option value="" disabled selected>Марка</option>
+              <option value="1">Марка 1</option>
+              <option value="2">Марка 2</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="frame-filter__item frame-filter__item_sm">
+          <div class="custom-select" data-value="">
+            <select id="model" name="model">
+              <option value="" disabled selected>Модель</option>
+              <option value="1">Модель 1</option>
+              <option value="2">Модель 2</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="frame-filter__item frame-filter__item_sm">
+          <div class="custom-select" data-value="">
+            <select id="city" name="city">
+              <option value="" disabled selected>Город</option>
+              <option value="1">Город 1</option>
+              <option value="2">Город 2</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="frame-filter__item frame-filter__item_md frame-filter__item_year">
+          <input
+            class="frame-filter__item-input"
+            type="number"
+            id="yearFrom"
+            name="yearFrom"
+            min="1970"
+            placeholder="Год от"
+          />
+          <input
+            class="frame-filter__item-input hidden"
+            type="number"
+            id="yearTo"
+            name="yearTo"
+            min="1970"
+            placeholder="до"
+          />
+        </div>
+
+        <div class="frame-filter__item frame-filter__item_lg frame-filter__item_price">
+          <input
+            class="frame-filter__item-input"
+            type="number"
+            id="priceFrom"
+            name="priceFrom"
+            min="0"
+            step="10000"
+            placeholder="Цена от"
+          />
+          <input
+            class="frame-filter__item-input hidden"
+            type="number"
+            id="priceTo"
+            name="priceTo"
+            min="0"
+            step="10000"
+            placeholder="до"
+          />
+        </div>
+
+        <div class="frame-filter__item frame-filter__item_sm hidden">
+          <div class="custom-select" data-value="">
+            <select id="bodyType" name="bodyType">
+              <option value="" disabled selected>Тип кузова</option>
+              <option value="1">Кузов 1</option>
+              <option value="2">Кузов 2</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="frame-filter__item frame-filter__item_sm hidden">
+          <div class="custom-select" data-value="">
+            <select id="gearType" name="gearType">
+              <option value="" disabled selected>Тип КПП</option>
+              <option value="1">КПП 1</option>
+              <option value="2">КПП 2</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="frame-filter__item frame-filter__item_sm hidden">
+          <div class="custom-select" data-value="">
+            <select id="engineType" name="engineType">
+              <option value="" disabled selected>Тип двигателя</option>
+              <option value="1">Двигатель 1</option>
+              <option value="2">Двигатель 2</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="frame-filter__item frame-filter__item_md hidden">
+          <div class="custom-select" data-value="">
+            <select id="color" name="color">
+              <option value="" disabled selected>Цвет</option>
+              <option value="1">Цвет 1</option>
+              <option value="2">Цвет 2</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="frame-filter__item frame-filter__item_lg hidden">
+          <input
+            class="frame-filter__item-input"
+            type="number"
+            id="mileageFrom"
+            name="mileageFrom"
+            min="0"
+            step="10000"
+            placeholder="Пробег от"
+          />
+          <input
+            class="frame-filter__item-input hidden"
+            type="number"
+            id="mileageTo"
+            name="mileageTo"
+            min="0"
+            step="10000"
+            placeholder="до"
+          />
+        </div>
+
+        <div class="frame-filter__item frame-filter__item_sm hidden">
+          <div class="custom-select" data-value="">
+            <select id="driveType" name="driveType">
+              <option value="" disabled selected>Тип привода</option>
+              <option value="1">привод 1</option>
+              <option value="2">привод 2</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="frame-filter__item frame-filter__item_sm hidden">
+          <div class="custom-select" data-value="">
+            <select id="steeringWheelSide" name="steeringWheelSide">
+              <option value="" disabled selected>Руль</option>
+              <option value="1">Левый</option>
+              <option value="2">Правый</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="frame-filter__item frame-filter__item_xl">
+          <button class="frame-filter__submit">Показать 1243 предложений</button>
+        </div>
+      </form>
+
+      <div class="frame-filter__controls">
+        <button class="frame-filter__controls-advanced">
+          <span class="frame-filter__controls-advanced-icon"></span>
+          <span class="frame-filter__controls-advanced-text">Расширенный фильтр</span>
+        </button>
+
+        <button class="frame-filter__controls-reset">Сбросить</button>
+      </div>
+    </div>
+
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

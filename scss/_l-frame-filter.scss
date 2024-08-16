@@ -1,0 +1,256 @@
+.frame-filter {
+  &__form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    @include mobilefr {
+      gap: 10px;
+    }
+  }
+
+  &__item {
+    flex: 0 0 calc(100% / 4 - 15px / 4 * 3);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    @include desktopfr {
+      flex: 0 0 calc(100% / 3 - 15px / 3 * 2);
+    }
+
+    @include laptopfr {
+      flex: 0 0 calc(100% / 2 - 15px / 2);
+    }
+
+    @include tabletfr {
+      flex: 0 0 calc(100% / 2 - 15px / 2);
+    }
+
+    @include mobilefr {
+      flex: 1 1 100%;
+      gap: 10px;
+    }
+
+    &_sm {
+      flex: 1 1 165px;
+    }
+
+    &_md {
+      flex: 1 1 235px;
+    }
+
+    &_lg {
+      flex: 1 1 330px;
+    }
+
+    &_xl {
+      flex: 1 1 calc(100% - 360px);
+      display: flex;
+      justify-content: flex-end;
+
+      @include desktopfr {
+        flex: 1 1 auto;
+        justify-content: flex-start;
+      }
+    }
+
+    &_sm,
+    &_md,
+    &_lg,
+    &_xl {
+      @include mobilefr {
+        flex: 1 1 100%;
+      }
+    }
+
+    & .custom-select {
+      &_tires-width .custom-select__selected,
+      &_tires-height .custom-select__selected,
+      &_tires-diameter .custom-select__selected,
+      &_tires-season .custom-select__selected,
+      &_tires-disks .custom-select__selected {
+        padding-left: 41px;
+        background-position: left 15px center;
+        background-repeat: no-repeat;
+      }
+
+      &_tires-width .custom-select__selected {
+        background-image: url(../assets/tire-width.svg);
+      }
+
+      &_tires-height .custom-select__selected {
+        background-image: url(../assets/tire-height.svg);
+      }
+
+      &_tires-diameter .custom-select__selected {
+        background-image: url(../assets/tire-diameter.svg);
+      }
+
+      &_tires-season .custom-select__selected {
+        background-image: url(../assets/tire-season.svg);
+      }
+
+      &_tires-disks .custom-select__selected {
+        background-image: url(../assets/tire-disk.svg);
+      }
+    }
+
+    &-input {
+      display: block;
+      padding: 13px 15px;
+      box-sizing: border-box;
+      width: 100%;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      color: #6d6c6c;
+      border: none;
+      border-radius: 7px;
+      outline: none;
+      background-color: $white;
+      -moz-appearance: textfield;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+
+  &__item.hidden,
+  & .hidden {
+    display: none;
+  }
+
+  &.advanced .hidden {
+    display: flex;
+  }
+
+  &:not(.advanced) &__item_year {
+    flex: 1 1 150px;
+  }
+
+  &:not(.advanced) &__item_price {
+    flex: 1 1 150px;
+  }
+
+  &:not(.advanced) &__item_xl {
+    flex: 1 1 auto;
+  }
+
+  &__submit {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 125%;
+    text-align: center;
+    color: $white;
+    border: 1px solid $red;
+    border-radius: 7px;
+    background-color: $red;
+    transition: all ease-in-out 0.1s;
+    cursor: pointer;
+
+    @include mobilefr {
+      width: 100%;
+    }
+
+    &_w100 {
+      width: 100%;
+    }
+
+    &:hover {
+      filter: contrast(90%);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+
+    @include mobilefr {
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    &-advanced,
+    &-reset {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 125%;
+      color: $black;
+      text-align: left;
+      border: none;
+      outline: none;
+      background: none;
+      user-select: none;
+      cursor: pointer;
+
+      @include mobilefr {
+        font-size: 12px;
+        line-height: 156%;
+      }
+    }
+
+    &-advanced {
+      &-icon {
+        position: relative;
+        display: inline-block;
+        height: 16px;
+        width: 28px;
+        padding: 2px;
+        box-sizing: border-box;
+        border: 2px solid $black;
+        border-radius: 28px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 2px;
+          top: 50%;
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          border-radius: 16px;
+          background-color: $black;
+          transform: translateY(-50%);
+          transition: left ease-in-out 0.1s;
+        }
+      }
+
+      &.active &-icon::before {
+        left: calc(100% - 8px);
+      }
+    }
+
+    &-reset {
+      color: #6d6c6c;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background: url(../assets/reset.svg) center no-repeat;
+      }
+    }
+  }
+}

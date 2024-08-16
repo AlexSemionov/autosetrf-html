@@ -1079,6 +1079,30 @@ img {
 .filter__tab.active {
   display: block;
 }
+.filter__tab iframe {
+  width: 100%;
+  height: 204px;
+}
+@media (max-width: 1240px) {
+  .filter__tab iframe {
+    height: 264px;
+  }
+}
+@media (max-width: 992px) {
+  .filter__tab iframe {
+    height: 321px;
+  }
+}
+@media (max-width: 768px) {
+  .filter__tab iframe {
+    height: 380px;
+  }
+}
+@media (max-width: 576px) {
+  .filter__tab iframe {
+    height: 640px;
+  }
+}
 .filter__tab-form {
   display: flex;
   align-items: center;
@@ -1228,4 +1252,226 @@ img {
 }
 .filter__tab-submit:active {
   transform: scale(0.98);
+}
+
+.frame-filter__form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+@media (max-width: 533px) {
+  .frame-filter__form {
+    gap: 10px;
+  }
+}
+.frame-filter__item {
+  flex: 0 0 calc(25% - 11.25px);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+@media (max-width: 1119.9px) {
+  .frame-filter__item {
+    flex: 0 0 calc(33.3333333333% - 10px);
+  }
+}
+@media (max-width: 872px) {
+  .frame-filter__item {
+    flex: 0 0 calc(50% - 7.5px);
+  }
+}
+@media (max-width: 534px) {
+  .frame-filter__item {
+    flex: 0 0 calc(50% - 7.5px);
+  }
+}
+@media (max-width: 533px) {
+  .frame-filter__item {
+    flex: 1 1 100%;
+    gap: 10px;
+  }
+}
+.frame-filter__item_sm {
+  flex: 1 1 165px;
+}
+.frame-filter__item_md {
+  flex: 1 1 235px;
+}
+.frame-filter__item_lg {
+  flex: 1 1 330px;
+}
+.frame-filter__item_xl {
+  flex: 1 1 calc(100% - 360px);
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 1119.9px) {
+  .frame-filter__item_xl {
+    flex: 1 1 auto;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 533px) {
+  .frame-filter__item_sm, .frame-filter__item_md, .frame-filter__item_lg, .frame-filter__item_xl {
+    flex: 1 1 100%;
+  }
+}
+.frame-filter__item .custom-select_tires-width .custom-select__selected, .frame-filter__item .custom-select_tires-height .custom-select__selected, .frame-filter__item .custom-select_tires-diameter .custom-select__selected, .frame-filter__item .custom-select_tires-season .custom-select__selected, .frame-filter__item .custom-select_tires-disks .custom-select__selected {
+  padding-left: 41px;
+  background-position: left 15px center;
+  background-repeat: no-repeat;
+}
+.frame-filter__item .custom-select_tires-width .custom-select__selected {
+  background-image: url(../assets/tire-width.svg);
+}
+.frame-filter__item .custom-select_tires-height .custom-select__selected {
+  background-image: url(../assets/tire-height.svg);
+}
+.frame-filter__item .custom-select_tires-diameter .custom-select__selected {
+  background-image: url(../assets/tire-diameter.svg);
+}
+.frame-filter__item .custom-select_tires-season .custom-select__selected {
+  background-image: url(../assets/tire-season.svg);
+}
+.frame-filter__item .custom-select_tires-disks .custom-select__selected {
+  background-image: url(../assets/tire-disk.svg);
+}
+.frame-filter__item-input {
+  display: block;
+  padding: 13px 15px;
+  box-sizing: border-box;
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #6d6c6c;
+  border: none;
+  border-radius: 7px;
+  outline: none;
+  background-color: #ffffff;
+  -moz-appearance: textfield;
+}
+.frame-filter__item-input::-webkit-outer-spin-button, .frame-filter__item-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.frame-filter__item.hidden, .frame-filter .hidden {
+  display: none;
+}
+.frame-filter.advanced .hidden {
+  display: flex;
+}
+.frame-filter:not(.advanced) .frame-filter__item_year {
+  flex: 1 1 150px;
+}
+.frame-filter:not(.advanced) .frame-filter__item_price {
+  flex: 1 1 150px;
+}
+.frame-filter:not(.advanced) .frame-filter__item_xl {
+  flex: 1 1 auto;
+}
+.frame-filter__submit {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 125%;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid #e32136;
+  border-radius: 7px;
+  background-color: #e32136;
+  transition: all ease-in-out 0.1s;
+  cursor: pointer;
+}
+@media (max-width: 533px) {
+  .frame-filter__submit {
+    width: 100%;
+  }
+}
+.frame-filter__submit_w100 {
+  width: 100%;
+}
+.frame-filter__submit:hover {
+  filter: contrast(90%);
+}
+.frame-filter__submit:active {
+  transform: scale(0.98);
+}
+.frame-filter__controls {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+@media (max-width: 533px) {
+  .frame-filter__controls {
+    justify-content: space-between;
+    gap: 16px;
+  }
+}
+.frame-filter__controls-advanced, .frame-filter__controls-reset {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 125%;
+  color: #000000;
+  text-align: left;
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+@media (max-width: 533px) {
+  .frame-filter__controls-advanced, .frame-filter__controls-reset {
+    font-size: 12px;
+    line-height: 156%;
+  }
+}
+.frame-filter__controls-advanced-icon {
+  position: relative;
+  display: inline-block;
+  height: 16px;
+  width: 28px;
+  padding: 2px;
+  box-sizing: border-box;
+  border: 2px solid #000000;
+  border-radius: 28px;
+}
+.frame-filter__controls-advanced-icon::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 16px;
+  background-color: #000000;
+  transform: translateY(-50%);
+  transition: left ease-in-out 0.1s;
+}
+.frame-filter__controls-advanced.active .frame-filter__controls-advanced-icon::before {
+  left: calc(100% - 8px);
+}
+.frame-filter__controls-reset {
+  color: #6d6c6c;
+}
+.frame-filter__controls-reset::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../assets/reset.svg) center no-repeat;
 }

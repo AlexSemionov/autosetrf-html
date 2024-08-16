@@ -241,13 +241,55 @@ if (filterFormCars && filterFormTires && filterResetButton) {
   });
 }
 
-
 function resizeIframe(obj) {
   obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
 }
 
-const tiresIframe = document.getElementById('tiresIframe')
-if (tiresIframe) {
-  resizeIframe(tiresIframe) 
+const filterElem = document.querySelector('.filter');
+
+if (filterElem) {
+  const iframes = filterElem.querySelectorAll('iframe');
+
+  // iframes.forEach((iframe) => resizeIframe(iframe));
 }
 
+// frame-filter
+
+const frameFilters = document.querySelectorAll('.frame-filter');
+
+frameFilters.forEach((frameFilter) => {
+  const form = frameFilter.querySelector('.frame-filter__form');
+  const advancedButton = frameFilter.querySelector('.frame-filter__controls-advanced');
+  const resetButton = frameFilter.querySelector('.frame-filter__controls-reset');
+
+  function resetForm(form) {
+    if (form && form.tagName.toLowerCase() === 'form') {
+      form.reset();
+      form.querySelectorAll('select').forEach((selectElem) => {
+        const customSelectElem = selectElem.parentNode;
+        const selectedTextElem = customSelectElem.querySelector('.custom-select__selected-text');
+        const disabledOption = selectElem.querySelector('option:disabled');
+        selectedTextElem.innerHTML = disabledOption.innerText;
+      });
+    }
+  }
+
+  if (resetButton && form) {
+    resetButton.addEventListener('click', () => resetForm(form));
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+    });
+  }
+
+  if (advancedButton) {
+    advancedButton.addEventListener('click', (event) => {
+      event.currentTarget.classList.toggle('active');
+      if (event.currentTarget.classList.contains('active')) {
+        frameFilter.classList.add('advanced');
+      } else {
+        frameFilter.classList.remove('advanced');
+      }
+    });
+  }
+});
