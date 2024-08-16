@@ -95,6 +95,20 @@ function closeAllSelect() {
   });
 }
 
+// slider
+
+const adBannersSwiper = new Swiper('.ad-banners .swiper', {
+  spaceBetween: 20,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  navigation: {
+    nextEl: '.ad-banners .ad-banners__slider-controls-next',
+    prevEl: '.ad-banners .ad-banners__slider-controls-prev',
+  },
+});
+
 // filter
 
 const filterTabButtons = document.querySelectorAll('.filter__controls-button');
@@ -143,16 +157,97 @@ if (filterAdvancedButton) {
   });
 }
 
-// slider
+// forms
 
-const adBannersSwiper = new Swiper('.ad-banners .swiper', {
-  spaceBetween: 20,
-  pagination: {
-    el: '.swiper-pagination',
-  },
+const filterFormCarsDataSample = {
+  brand: '',
+  model: '',
+  city: '',
+  yearFrom: '',
+  yearTo: '',
+  priceFrom: '',
+  priceTo: '',
+  bodyType: '',
+  gearType: '',
+  engineType: '',
+  mileageFrom: '',
+  mileageTo: '',
+  driveType: '',
+  steeringWheelSide: '',
+};
+const filterFormTiresDataSample = {
+  tiresBrand: '',
+  tiresWidth: '',
+  tiresHeight: '',
+  tiresDiameter: '',
+  tiresSeason: '',
+  tiresDisks: '',
+  tiresPriceTo: '',
+};
 
-  navigation: {
-    nextEl: '.ad-banners .ad-banners__slider-controls-next',
-    prevEl: '.ad-banners .ad-banners__slider-controls-prev',
-  },
-});
+const filterFormCars = document.getElementById('filterFormCars');
+const filterFormTires = document.getElementById('filterFormTires');
+const filterResetButton = document.querySelector('.filter__tabs-controls-reset');
+
+if (filterFormCars && filterFormTires && filterResetButton) {
+  filterFormCars.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const data = { ...filterFormCarsDataSample };
+    Object.keys(data).forEach((key) => {
+      const fieldValue = formData.get(key);
+      data[key] = fieldValue;
+    });
+    console.log(data);
+  });
+
+  filterFormTires.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const data = { ...filterFormTiresDataSample };
+
+    Object.keys(data).forEach((key) => {
+      const fieldValue = formData.get(key);
+      data[key] = fieldValue;
+    });
+    console.log(data);
+  });
+
+  function resetForm(formObj) {
+    formObj.form.reset();
+    const selectElems = Object.keys(formObj.dataSample)
+      .map((key) => {
+        return document.getElementById(key);
+      })
+      .filter((item) => {
+        return item.tagName.toLowerCase() === 'select';
+      });
+
+    selectElems.forEach((selectElem) => {
+      const customSelectElem = selectElem.parentNode;
+      const selectedTextElem = customSelectElem.querySelector('.custom-select__selected-text');
+      const disabledOption = selectElem.querySelector('option:disabled');
+      selectedTextElem.innerHTML = disabledOption.innerText;
+    });
+  }
+
+  filterResetButton.addEventListener('click', () => {
+    const filterFormsObjs = [
+      { form: filterFormCars, dataSample: filterFormCarsDataSample },
+      { form: filterFormTires, dataSample: filterFormTiresDataSample },
+    ];
+
+    filterFormsObjs.forEach((formObj) => resetForm(formObj));
+  });
+}
+
+
+function resizeIframe(obj) {
+  obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+}
+
+const tiresIframe = document.getElementById('tiresIframe')
+if (tiresIframe) {
+  resizeIframe(tiresIframe) 
+}
+

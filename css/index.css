@@ -1075,17 +1075,20 @@ img {
 }
 .filter__tab {
   display: none;
+}
+.filter__tab.active {
+  display: block;
+}
+.filter__tab-form {
+  display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
 }
 @media (max-width: 680px) {
-  .filter__tab {
+  .filter__tab-form {
     gap: 10px;
   }
-}
-.filter__tab.active {
-  display: flex;
 }
 .filter__tab-item {
   flex: 0 0 calc(25% - 11.25px);

@@ -178,16 +178,20 @@
 
   &__tab {
     display: none;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-
-    @include tabletsm {
-      gap: 10px;
-    }
 
     &.active {
+      display: block;
+    }
+
+    &-form {
       display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+
+      @include tabletsm {
+        gap: 10px;
+      }
     }
 
     &-item {
