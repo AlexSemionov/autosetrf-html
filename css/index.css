@@ -1076,7 +1076,6 @@ img {
 .filter__tab {
   position: relative;
   display: none;
-  margin-right: -16px;
 }
 @media (max-width: 992px) {
   .filter__tab {
@@ -1095,6 +1094,7 @@ img {
   z-index: 2;
   width: 16px;
   background-color: #f3f3f5;
+  display: none;
 }
 @media (max-width: 992px) {
   .filter__tab::after {

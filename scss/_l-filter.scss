@@ -179,7 +179,7 @@
   &__tab {
     position: relative;
     display: none;
-    margin-right: -16px;
+    // margin-right: -16px;
 
     @include laptop {
       margin-right: 0;
@@ -198,6 +198,7 @@
       z-index: 2;
       width: 16px;
       background-color: #f3f3f5;
+      display: none;
 
       @include laptop {
         display: none;
