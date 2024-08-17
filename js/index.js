@@ -312,7 +312,10 @@ if (filterElem) {
 
   filterFrameTabs.forEach((tab) => {
     tab.addEventListener('pointerenter', () => {
+      setTimeout(() => updateFramesHeight(), 500);
       setTimeout(() => updateFramesHeight(), 1000);
+      setTimeout(() => updateFramesHeight(), 1500);
+      setTimeout(() => updateFramesHeight(), 2000);
     });
 
     tab.addEventListener('pointerleave', () => {
