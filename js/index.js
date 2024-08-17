@@ -241,18 +241,6 @@ if (filterFormCars && filterFormTires && filterResetButton) {
   });
 }
 
-function resizeIframe(obj) {
-  obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-}
-
-const filterElem = document.querySelector('.filter');
-
-if (filterElem) {
-  const iframes = filterElem.querySelectorAll('iframe');
-
-  // iframes.forEach((iframe) => resizeIframe(iframe));
-}
-
 // frame-filter
 
 const frameFilters = document.querySelectorAll('.frame-filter');
@@ -293,3 +281,42 @@ frameFilters.forEach((frameFilter) => {
     });
   }
 });
+
+const filterElem = document.querySelector('.filter');
+
+if (filterElem) {
+  const iframes = filterElem.querySelectorAll('iframe');
+  const filterFrameTabs = filterElem.querySelectorAll('.filter__tab_frame');
+
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
+
+  function updateFramesHeight() {
+    iframes.forEach((iframe) => resizeIframe(iframe));
+  }
+
+  window.addEventListener('resize', () => updateFramesHeight());
+
+  filterElem.addEventListener('click', (event) => {
+    const isTabButton = event.target.classList.contains('filter__controls-button');
+
+    if (isTabButton) updateFramesHeight();
+  });
+
+  iframes.forEach((iframe) =>
+    iframe.addEventListener('load', () => {
+      resizeIframe(iframe);
+    })
+  );
+
+  filterFrameTabs.forEach((tab) => {
+    tab.addEventListener('pointerenter', () => {
+      setTimeout(() => updateFramesHeight(), 200);
+    });
+
+    tab.addEventListener('pointerleave', () => {
+      updateFramesHeight();
+    });
+  });
+}
